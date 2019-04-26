@@ -24,6 +24,7 @@ Criar banco **bdr**
 * php artisan serve
 
 ***
+* Arquivo dos métodos (https://github.com/lucasgollner/dotGroup/blob/master/app/Http/Controllers/Controller.php)
 * Método da Questão 01: http://localhost:8000/questaoUm
 * Método da Questão 02: http://localhost:8000/questaoDois
 * Método da Questão 03: http://localhost:8000/questaoTres
