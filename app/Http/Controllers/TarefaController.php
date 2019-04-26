@@ -14,7 +14,7 @@ class TarefaController extends Controller
         //
         $tarefas = Tarefa::All();
 
-        return response()->json($tarefas,200);
+        return response()->json(["status"=>"sucesso","msg"=>$tarefas],200);
     }
 
     public function list()
@@ -35,10 +35,10 @@ class TarefaController extends Controller
             'tarefas_usuario' => 'required'
         ]);
         if($validator->fails()){
-            return response()->json(["msg"=>$validator->errors()], 400);       
+            return response()->json(["status"=>"erro","msg"=>$validator->errors()], 400);       
         }
         $tarefa = Tarefa::create($input);
-        return response()->json(["msg"=>"Tarefa criada!","id"=>$tarefa->id],200);
+        return response()->json(["status"=>"sucesso","msg"=>"Tarefa criada!","id"=>$tarefa->id],200);
     }
 
     public function update(Request $request, $id)
@@ -49,9 +49,9 @@ class TarefaController extends Controller
         if($tarefa){
             $tarefa->fill($input);
             $tarefa->save();
-            return response()->json(["msg"=>"Tarefa atualizada!"],200);
+            return response()->json(["status"=>"sucesso","msg"=>"Tarefa atualizada!"],200);
         }else{
-            return response()->json(["msg"=>"Tarefa não encontrada!"],404);
+            return response()->json(["status"=>"erro","msg"=>"Tarefa não encontrada!"],404);
         }
     }
 
@@ -61,9 +61,9 @@ class TarefaController extends Controller
         $tarefa = Tarefa::find($id);
         if($tarefa){
             $tarefa->delete();
-            return response()->json(["msg"=>"Tarefa DELETADA!","id"=>$id],202);
+            return response()->json(["status"=>"sucesso","msg"=>"Tarefa DELETADA!","id"=>$id],202);
         }else{
-            return response()->json(["msg"=>"Tarefa não encontrada!"],404);
+            return response()->json(["status"=>"erro","msg"=>"Tarefa não encontrada!"],404);
         }
     }
 }
