@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "7fe37a67-26cc-40bd-964f-bcb94b31acf5",
+		"name": "Teste DOT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Teste LISTAGEM Tarefas API",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/tarefa/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tarefa",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Teste GRAVA Tarefa API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"tarefas_titulo\":\"Quinta TAREFA\",\n\t\"tarefas_texto\":\"Teste para DOT\",\n\t\"tarefas_usuario\":\"lucasgollner\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/tarefa/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tarefa",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Teste ATUALIZA Tarefa API",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"tarefas_titulo\":\"Quinta TAREFA alterada\",\n\t\"tarefas_texto\":\"Teste para DOT\",\n\t\"tarefas_usuario\":\"lucasgollner\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/tarefa/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tarefa",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Teste DELETA Tarefa API",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/tarefa/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tarefa",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
