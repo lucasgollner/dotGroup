@@ -63,8 +63,11 @@ class Controller extends BaseController
 
     		public function getUserList(){
     			$dbconn = new DatabaseConnection('localhost','user','password');
-    			$results = $dbconn->query('select name from user order by name asc');
-
+                
+                if(!dbconn) return $dbconn->error();
+                
+                $results = $dbconn->query('select name from user order by name asc');
+                                    
     			return $results;
     		}
 
