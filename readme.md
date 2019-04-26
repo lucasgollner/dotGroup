@@ -7,13 +7,13 @@
 ***
 
 Testes da API
-Testes realizados com **POSTMAN** 6.7.4 [https://www.getpostman.com/](https://www.getpostman.com/)
+realizados com **POSTMAN** 6.7.4 [https://www.getpostman.com/](https://www.getpostman.com/)
 > `Dentro da pasta PUBLIC do projeto exite o arquivo: TesteBDRpostman.json (com as configurações dos testes)`
 
 ***
 
-Foram criados arquivos de MIGRATION (para geração da tabela do banco)
-Criar banco **bdr**
+* Foram criados arquivos de MIGRATION (para geração da tabela do banco)
+* Criar banco com nomeado: **bdr**
 
 ***
 
