@@ -32,7 +32,7 @@ class Controller extends BaseController
     			 	  		$txt .= $i."<br>";
     	}
 
-    	return $txt;
+    	return $txt."<br<br><br>(Thanks / Gracias).";
 
     }
 
