@@ -32,6 +32,8 @@ realizados com **POSTMAN** 6.7.4 [https://www.getpostman.com/](https://www.getpo
 
 Métodos da Questão 04 (API)
 
+* Arquivo dos métodos (https://github.com/lucasgollner/dotGroup/blob/master/app/Http/Controllers/TarefaController.php)
+
 * View de visualização das Tarefas: http://localhost:8000/tarefa
 
 * > `GET    : http://127.0.0.1:8000/api/tarefa/`
